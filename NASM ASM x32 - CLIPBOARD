@@ -43,3 +43,14 @@ _start
 	mov ebx, 0
 	int 0x80
 --------------------------
+--------------------------
+[JUMPS]
+
+jmp label ;jump to label
+je label ;jump to label if Equal
+jne label ;jump to label if Not Equal
+jg label ;jump to lavel if Greater than
+jl label ;jump to label if Lesser than
+ja label ;jump to label if above
+jb label ;jump to label if below
+--------------------------
