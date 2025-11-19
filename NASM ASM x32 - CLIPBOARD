@@ -1,0 +1,45 @@
+NASM ASM CLIPBOARD - 32 BIT
+--------------------------
+[BASIC START]
+
+section .data
+
+section .bss
+
+section .text
+	global _start:
+_start
+--------------------------
+[FILLED START]
+
+section .data
+	msgx db "Prompt 1",0
+	msgx_L equ $-msgx
+section .bss
+	var resb 260
+section .text
+	global _start:
+_start
+--------------------------
+[BASIC OUTP]
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, msgx
+	mov edx, msgx_L
+	int 0x80
+--------------------------
+[BASIC INP]
+
+	mov eax, 3
+	mov ebx, 0
+	mov ecx, var
+	mov edx, 260
+	int 0x80
+--------------------------
+[BASIC EXIT]
+
+	mov eax, 1
+	mov ebx, 0
+	int 0x80
+--------------------------
